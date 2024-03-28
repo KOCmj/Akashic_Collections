@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='dist/output.css') }}">
 <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
     <div class="sm:w-full sm:max-w-sm">
         <img class="mx-auto h-10" src="{{ url_for('static', filename='images/JPEG image 13.jpeg') }}" alt="Your Company">
@@ -15,36 +16,37 @@
             </div>
 
             <div>
-                <div class="flex items-center justify-between">
-                    {{ form.password.label(class="block text-sm font-medium leading-6 text-indigo-600") }}
-                    <div class="text-sm">
-                        <a href="#" class="font-semibold text-teal-600 hover:text-indigo-500">Forgot password?</a>
-                    </div>
-                </div>
+                {{ form.password.label(class="block text-sm font-medium leading-6 text-indigo-600") }}
                 <div class="mt-2">
                     {{ form.password(class="block w-full rounded-md border-0 py-1.5 text-teal-600 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6") }}
                 </div>
             </div>
-  
-        <div>
-          <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
-        </div>
-      </form>
-      <div class="flash">
+
+            <div class="text-sm text-center mt-2">
+                <a href="#" class="font-semibold text-teal-600 hover:text-indigo-500">Forgot password?</a>
+            </div>
+
+            <div>
+                <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
+            </div>
+        </form>
+
+        <div class="flash mt-5">
             {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
                     {% for category, message in messages %}
-                        <div class="alert alert- {{ category }}">
+                        <div class="alert alert-{{ category }}">
                             {{ message }}
                         </div>
                     {% endfor %}
                 {% endif %}
             {% endwith %}
         </div>
-  
-      <p class="mt-10 text-center text-sm text-teal-500">
-        Not a member?
-        <a href="{{ url_for('site.membership') }}" class="font-semibold leading-6 text-teal-600 hover:text-indigo-500">Become a member today!</a>
-      </p>
+
+        <p class="mt-10 text-center text-sm text-teal-500">
+            Not a member?
+            <a href="{{ url_for('site.membership') }}" class="font-semibold leading-6 text-teal-600 hover:text-indigo-500">Become a member today!</a>
+        </p>
     </div> 
-    <link rel="stylesheet" href="{{ url_for('static', filename='dist/output.css') }}">
+</div>
+

@@ -1018,3 +1018,12 @@ section.extra {
   background-color: #1a1d3a;
 }
 
+.flash {
+  margin-top: 80px;
+  color: #799dff;
+}
+
+h2 {
+  text-align: center;
+  justify-content: center;
+}
