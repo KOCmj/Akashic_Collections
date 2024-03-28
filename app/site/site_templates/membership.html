@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<link rel="stylesheet" href="../../static/membership.css">
+<h1 class="relative flex h-16 items-center justify-center text-blue-600 font-medium text-4xl">Get a Free Akashic Card Today!</h1>
+<div class="container p-5 items-center justify-center">
+    <img src="../../static/images/JPEG image 24.jpeg" alt="Akashic Card" class="akashic mt-4">
+</div>
+
+<section>
+    <h2 class="relative flex items center justify-center">Welcome! Get a free akashic card from
+        The Akashic Collections.
+    </h2>
+</section>
+
+<section>
+    <a href="{{ url_for('site.imagine') }}">Apply for a Akashic Card Online</a>
+    <p>Metaverse residents can get a digital library card through <a href="{{ url_for('site.imagine') }}">our metaverse application</a>
+        and gain access to an array of digital greatness. You may also request physical items 
+        with your digital account; however you will need to check out your items with crypto.
+    </p>
+    <p>If you are an meatverse researcher looking to request research materials, please use our <a href="{{ url_for('site.imagine') }}">alternate form.</a></p>
+</section>
+{% endblock %}
