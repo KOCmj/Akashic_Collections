@@ -903,20 +903,19 @@ video {
 
 body {
   position: relative;
-  inset: 0;
-  background-image: linear-gradient(to bottom, #8a3ab9, #2563eb);
   margin: 0;
   padding: 0;
+  background: linear-gradient(to bottom, #4B0082, #2563eb);
   min-height: 100vh;
-}
 
+}
 
 .navbar-content .search {
   position: relative;
   align-items: center;
   padding: 8px;
   border-radius: 28px;
-  background-color: #4B0082;
+  background-color: #5a019a;
   transition: background 0.25s;
   width: max-content;
 }
@@ -929,7 +928,7 @@ body {
   padding-left: 2rem;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
-  color: #186A3B;
+  color: #000000;
   margin-left: 8px;
   outline: none;
   border: none;
@@ -951,8 +950,7 @@ body {
 }
 
 nav {
-  top: 0;
-  left: 0;
+  position: static;
   width: 100%;
   z-index: 1000; 
   background-color: rgba(36, 3, 41, 0.788);
@@ -1019,3 +1017,4 @@ section.extra {
   border: 5px solid #3b5998;
   background-color: #1a1d3a;
 }
+

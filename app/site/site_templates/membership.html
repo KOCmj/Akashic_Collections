@@ -2,10 +2,10 @@
 
 {% block content %}
 
-<link rel="stylesheet" href="../../static/membership.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='membership.css') }}">
 <h1 class="relative flex h-16 items-center justify-center text-blue-600 font-medium text-4xl">Get a Free Akashic Card Today!</h1>
 <div class="container p-5 items-center justify-center">
-    <img src="../../static/images/JPEG image 24.jpeg" alt="Akashic Card" class="akashic mt-4">
+    <img src="{{ url_for('static', filename='images/JPEG image 24.jpeg') }}" alt="Akashic Card" class="akashic mt-4">
 </div>
 
 <section>

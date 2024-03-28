@@ -1,6 +1,6 @@
 <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
     <div class="sm:w-full sm:max-w-sm">
-        <img class="mx-auto h-10" src="../../static/images/JPEG image 13.jpeg" alt="Your Company">
+        <img class="mx-auto h-10" src="{{ url_for('static', filename='images/JPEG image 13.jpeg') }}" alt="Your Company">
         <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Sign in to your account</h2>
     </div>
 
@@ -47,4 +47,4 @@
         <a href="{{ url_for('site.membership') }}" class="font-semibold leading-6 text-teal-600 hover:text-indigo-500">Become a member today!</a>
       </p>
     </div> 
-    <link rel="stylesheet" href="../static/dist/output.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/output.css') }}">
