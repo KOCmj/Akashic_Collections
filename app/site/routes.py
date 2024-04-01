@@ -13,16 +13,16 @@ def home():
 @site.route('/search', methods =['POST'])
 def search():
     if request.method == 'POST':
-        query = request.form.get('query')
-        if query:
-            return render_template('searched.html', query=query)
+        book_image = request.form.get('book_image')
+        if book_image:
+            return render_template('searched.html', book_image=book_image)
         else:
             flash('Enter a valid search', 'warning')
             return redirect(url_for('site.home'))
 
-@site.route('/searched/<query>')
-def searched(query):
-    return render_template('searched.html', query=query)
+@site.route('/searched/<book_image>')
+def searched(book_image):
+    return render_template('searched.html', book_image=book_image)
 
 @site.route('/akashic-card')
 def membership():
@@ -35,3 +35,4 @@ def profile():
 @site.route('/imagine')
 def imagine():
     return render_template('imagine.html')
+

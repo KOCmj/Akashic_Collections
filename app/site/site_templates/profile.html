@@ -6,12 +6,26 @@
         <div class="container p-5">
             <div class="row">
                 <div class="d-md-flex align-items-center justify-content-evenly">
-                    <h1 class="col text-center text-indigo-500 justify-center flex">{{ current_user.email }}'s Club Memebership</h1>
+                    <h1 class="col text-center text-indigo-500 justify-center flex">{{ current_user.first_name }} {{ current_user.last_name}}'s Club Memebership</h1>
                     <h2 class="col text-center text-teal-600 justify-center flex">More benefits? Your choice...</h2>
-                    <a href="{{ url_for('site.membership') }}" class="justify-center flex text-red-600">Get a Akashic Card</a>
+                    <a href="{{ url_for('site.membership') }}" class="justify-center flex text-red-600">Get a exclusive Akashic Card</a>
                     <!-- No idea why red is the only color that displays -->
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="Card">
+        <div class="a-card">You now have a digital Akashic Collections Card.</div>
+        <div class="library-card">
+            <img src="{{ url_for('static', filename='images/JPEG image 27.jpeg') }}" alt="" class ="card">
+            <img src="{{ url_for('static', filename='images/JPEG image 13.jpeg') }}" alt="" class ="a-logo">
+            <h2 class="name">Member Name</h2>
+            <h2 class="issued">Issued</h2>
+            <h2 class="company">Akashic Collections</h2>
+            <p class="user-name">{{ current_user.first_name }} {{ current_user.last_name }}</p>
+            <p class="issued">{{ current_user.date_created.strftime('%m/%d/%y') }}</p>
+            <p class="id">{{ current_user.token }}</p>
         </div>
     </section>
 
@@ -23,10 +37,9 @@
                 <li class="list-group-item text-indigo-500 justify-center flex">Token: {{ current_user.token }}</li>
             </ul>
             </div>
-            <div class="row" style="margin-top: 25px;">
-                <div class="col-4"></div>
-                <div class="col-3 p-10">
-                    <img src="{{ url_for('static', filename='images/JPEG image 23.jpeg') }}" alt="Akashic Records" class="w-3 h-auto flex">
+            <div class="row mt-5" style="margin-top: 25px;">
+                <div class="col-12 p-10">
+                    <img src="{{ url_for('static', filename='images/JPEG image 26.jpeg') }}" alt="Akashic Records" class="pp">
                 </div>
             </div>
         </div>

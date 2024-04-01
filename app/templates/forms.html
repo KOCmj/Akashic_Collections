@@ -1,3 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,22 +11,22 @@
 <meta name="Description" content="Enter your description here"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='dist/output.css') }}">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <title>Create LCC Account</title>
 </head>
-<body class="bg-teal-600 text-indigo-600">
-  <div class="main-content">
-    <img src="{{ url_for('static', filename='images/JPEG image 23.jpeg') }}" alt="" class="main-image">
-  </div>
-  <div class="content-container">
-    <div class="header-container">
-      <img src="{{ url_for('static', filename='images/JPEG image 13.jpeg') }}" id="brand-image" class="Brand-logo" alt="Logo">
-    </div>
+<body>
+    <header>
+        <div class="main-content">
+            <img src="{{ url_for('static', filename='images/JPEG image 23.jpeg') }}" alt="" class="main-image">
+            <h1 class="apply">Apply for a Akashic Card Online</h1>
+        </div>
+    </header>
+
     <div role="heading" id="create-account" aria-level="1" class="start">Let's get started</div>
       <div class="verify-email">
-        <span class="create-account verify-email">Step 1 of 2: Personal Information</span>
+        <span class="create-account verify-email">Personal Information:</span>
       </div>
     <form method="POST">
         {{ form.hidden_tag() }}
@@ -80,7 +84,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="{{ url_for('static', filename='dist/output.css') }}">
 </body>
 </html>
-      
+{% endblock %}     
